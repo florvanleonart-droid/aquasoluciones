@@ -1,25 +1,117 @@
+
+.textoservicios {
+  color: white;
+  text-align: center;
+  background-color: #007BFF;
+
+}
+
+.texto-emergencia {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.texto-emergencia.fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: parpadeo 1.2s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+
+
+
+
 .seccion-fondo {
   background-image: url('img/plomero.jpg');
-  background-attachment: fixed; /* esto hace que quede fija */
-  background-size: cover;      /* ocupa todo el espacio */
-  background-position: center; /* centrada */
-  height: 80vh;                /* altura de la sección */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .textoservicios {
   color: white;
   text-align: center;
-
+  background-color: ;
 }
 
-.card-body  {
-  background-color:  #007fff ;
+.card-body {
+  background-color: #007fff;
   color: white;
 }
+
 .separador {
-  height: 60px; /* probá 40px, 60px, 80px según te guste */
-   background-image: url('img/plomero.jpg');
-  background-attachment: fixed; /* esto hace que quede fija */
-  background-size: cover;      /* ocupa todo el espacio */
-  background-position: center; /* centrada */
+  height: 60px;
+  background-image: url('img/plomero.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
+
+/* 🔥 Emergencia fija arriba */
+.texto-emergencia {
+  background-color: #dc3545; /* rojo */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  z-index: 9999; /* siempre arriba de todo */
+  font-size: 1.2rem;
+  animation: parpadeo 1.2s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* 🔘 Botón de WhatsApp fijo */
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px; /* lo agrandamos un poco para que entre el texto */
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.05);
+}
+.logo {
+  height: 200px;
+  width: auto;
+  margin-top: 30px; /* ← bajalo más o menos según lo que necesites */
+}
+
+.seccion-fondo .container {
+  margin-bottom: -50px; /* ajustá según necesites */
+}
+
