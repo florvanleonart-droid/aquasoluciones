@@ -102,3 +102,84 @@
 .seccion-fondo .container {
   margin-bottom: -50px; /* ajustá según necesites */
 }
+
+
+/* ==== SECCIÓN SOMOS UNA EMPRESA ==== */
+.confianza-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(240,248,255,0.98));
+  padding: 60px 0;
+  text-align: center;
+}
+
+.confianza-titulo {
+  color: #0d6efd; /* azul tipo Bootstrap */
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.confianza-text {
+  color: #333;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.confianza-photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.confianza-figure {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 520px;
+  min-width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.confianza-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.confianza-img:hover {
+  transform: scale(1.02);
+}
+
+.confianza-banner {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(13,110,253,2); /* azul clarito translúcido */
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(13,110,253,0.06);
+}
+
+@media (max-width: 600px) {
+  .confianza-figure {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .confianza-img {
+    height: 220px;
+  }
+
+  .confianza-banner {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
